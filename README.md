@@ -19,20 +19,22 @@ A comprehensive network discovery and port scanning tool built for PowerShell 7+
 
 ## Usage
 
-```.\portscan.ps1 [-network <string>] [-timeout <int>] [-maxThreads <int>] [-skipPortScan] [-startPort <int>] [-endPort <int>] [-verbose] [-maxPortBatchSize <int>] [-maxMemoryMB <int>] [-gcInterval <int>] [-commonPortsOnly] [-checkHTMLHeaders] [-headerTimeout <int>]```
+```Powershell
+.\portscan.ps1 [-network <string>] [-timeout <int>] [-maxThreads <int>] [-skipPortScan] [-startPort <int>] [-endPort <int>] [-verbose] [-maxPortBatchSize <int>] [-maxMemoryMB <int>] [-gcInterval <int>] [-commonPortsOnly] [-checkHTMLHeaders] [-headerTimeout <int>]
+```
 
 
 ### Parameters
 
 - `-network`: Target network (default: 192.168.0)
 - `-timeout`: Milliseconds per port check (default: 100)
-- `-maxThreads`: Concurrent port checks (default: 1000)
+- `-maxThreads`: Concurrent port checks (default: 50)
 - `-skipPortScan`: Skip port scanning for faster network discovery
 - `-startPort`: Start port for scanning (default: 20)
 - `-endPort`: End port for scanning (default: 32400)
 - `-verbose`: Enable detailed output
-- `-maxPortBatchSize`: Maximum number of ports to scan at once (default: 2000)
-- `-maxMemoryMB`: Maximum memory usage in MB (default: 4096)
+- `-maxPortBatchSize`: Maximum number of ports to scan at once (default: 100)
+- `-maxMemoryMB`: Maximum memory usage in MB (default: 1024)
 - `-gcInterval`: Run garbage collection after this many devices (default: 5)
 - `-commonPortsOnly`: Scan only common ports instead of a range
 - `-checkHTMLHeaders`: Try to retrieve HTML titles from web ports (default: true)
@@ -57,13 +59,19 @@ A comprehensive network discovery and port scanning tool built for PowerShell 7+
 ## Examples
 
 1. Scan default network with common ports:
-```.\portscan.ps1 -commonPortsOnly```
+```
+.\portscan.ps1 -commonPortsOnly
+```
 
-2. Scan a specific network with custom port range:
-```.\portscan.ps1 -network "10.0.0" -startPort 1 -endPort 1024```
+3. Scan a specific network with custom port range:
+```
+.\portscan.ps1 -network "10.0.0" -startPort 1 -endPort 1024
+```
 
-3. Quick network discovery without port scanning:
-```.\portscan.ps1 -skipPortScan```
+5. Quick network discovery without port scanning:
+```
+.\portscan.ps1 -skipPortScan
+```
 
 
 ## Output
