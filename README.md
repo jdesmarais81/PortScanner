@@ -56,7 +56,7 @@ A comprehensive network discovery and port scanning tool built for PowerShell 7+
 
 ## Examples
 
-1. Scan default network with common ports:
+1. Scan default network with common ports: (Recommended for Quick Scans)
 ```
 .\portscan.ps1 -commonPortsOnly
 ```
