@@ -1,6 +1,7 @@
 # PowerShell Network & Port Scanner
 
 A comprehensive network discovery and port scanning tool built for PowerShell 7+.
+![Port Scanner in Action](https://github.com/jdesmarais81/PortScanner/blob/main/In%20Action.png)
 
 ## Features
 
@@ -37,6 +38,22 @@ A comprehensive network discovery and port scanning tool built for PowerShell 7+
 - `-checkHTMLHeaders`: Try to retrieve HTML titles from web ports (default: true)
 - `-headerTimeout`: Timeout in milliseconds for HTML header requests (default: 3000)
 
+## Common Ports Scanned
+
+| Port | Service | Port | Service | Port | Service |
+|------|---------|------|---------|------|---------|
+| 21   | FTP     | 80   | HTTP    | 3306 | MySQL   |
+| 22   | SSH     | 88   | Kerberos| 3389 | RDP     |
+| 23   | Telnet  | 110  | POP3    | 5432 | PostgreSQL |
+| 25   | SMTP    | 123  | NTP     | 6379 | Redis   |
+| 53   | DNS     | 135  | RPC     | 8080 | HTTP-Alt|
+| 69   | TFTP    | 139  | NetBIOS | 8443 | HTTPS-Alt |
+| 443  | HTTPS   | 445  | SMB     | 9443 | Portainer |
+| 465  | SMTPS   | 1433 | MSSQL   | 9090 | Prometheus |
+| 587  | SMTP Sub| 2375 | Docker  | 27017| MongoDB |
+| 636  | LDAPS   | 3000 | Grafana | 32400| Plex    |
+
+
 ## Examples
 
 1. Scan default network with common ports:
@@ -49,12 +66,12 @@ A comprehensive network discovery and port scanning tool built for PowerShell 7+
 ```.\portscan.ps1 -skipPortScan```
 
 
-
 ## Output
 
 The script generates two report files on your desktop:
 1. HTML report with detailed device and port information
 2. CSV report for easy data analysis
+![HTML Export Example](https://github.com/jdesmarais81/PortScanner/blob/main/HTML-Export.png)
 
 ## Notes
 
