@@ -23,7 +23,6 @@ A comprehensive network discovery and port scanning tool built for PowerShell 7+
 .\portscan.ps1 [-network <string>] [-timeout <int>] [-maxThreads <int>] [-skipPortScan] [-startPort <int>] [-endPort <int>] [-verbose] [-maxPortBatchSize <int>] [-maxMemoryMB <int>] [-gcInterval <int>] [-commonPortsOnly] [-checkHTMLHeaders] [-headerTimeout <int>]
 ```
 
-
 ### Parameters
 
 - `-network`: Target network (default: 192.168.0)
@@ -55,7 +54,6 @@ A comprehensive network discovery and port scanning tool built for PowerShell 7+
 | 587  | SMTP Sub| 2375 | Docker  | 27017| MongoDB |
 | 636  | LDAPS   | 3000 | Grafana | 32400| Plex    |
 
-
 ## Examples
 
 1. Scan default network with common ports:
@@ -72,7 +70,6 @@ A comprehensive network discovery and port scanning tool built for PowerShell 7+
 ```
 .\portscan.ps1 -skipPortScan
 ```
-
 
 ## Output
 
@@ -91,3 +88,7 @@ The script generates two report files on your desktop:
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
