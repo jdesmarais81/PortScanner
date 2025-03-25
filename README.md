@@ -1,6 +1,7 @@
 # PowerShell Network & Port Scanner
 
 A comprehensive network discovery and port scanning tool built for PowerShell 7+.
+
 ![Port Scanner in Action](https://github.com/jdesmarais81/PortScanner/blob/main/In%20Action.png)
 
 ## Features
